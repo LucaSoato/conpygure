@@ -1,2 +1,3 @@
-# conpygure
-A library to con*py*gure little projects 😊
+# Conpygure
+
+A library to con*py*gure little projects :)  
