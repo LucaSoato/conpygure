@@ -14,6 +14,20 @@ Defining your configuration is as easy as:
     >>>     option_three = ["ab", "cd"]
     >>>     option_four = {"a":1}
 
+To print your serialized configuration:
+
+    >>> print(c.dumps())
+
+Dump and load your config to file:
+
+    >>> c.dump("/path/to/conf.toml")
+    >>> c.load("/path/to/conf.toml")
+
+Serializers just need to define dumps and loads methods:
+
+    >>> import json
+    >>> c.serializer = json
+
 """
 
 from inspect import isclass

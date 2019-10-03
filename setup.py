@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 from conpygure.__version__ import __version__
 
 setup(
-    name='Conpygure',
+    name='conpygure',
     version=__version__,
     packages=find_packages(exclude=('src', 'src.*', '*.src', '*.src.*')),
     author='Luca Soato',
