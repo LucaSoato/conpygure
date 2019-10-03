@@ -36,7 +36,7 @@ from typing import Union
 
 import toml
 
-from .__version__ import __version__
+__version__ = "0.0.1"
 
 serializer = toml
 config_tree = None
