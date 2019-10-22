@@ -1,5 +1,5 @@
 """
-Conpygure is a library that ease the burden of configuring little python projects.
+Conpygure is a library that eases the burden of configuring little python projects.
 Configurator objects are classes defined extending the conpygure.Conf class.
 Defining your configuration is as easy as:
 
