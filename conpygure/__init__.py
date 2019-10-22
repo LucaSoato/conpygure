@@ -36,7 +36,7 @@ from typing import Union
 
 import toml
 
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 
 serializer = toml
 config_tree = None
@@ -153,9 +153,12 @@ def load(file: Union[str, Path], cls: MetaConf = None):
         cls._load(file)
 
 
-def tree(cls: MetaConf) -> dict:
+def tree(cls: MetaConf = None) -> dict:
     """Dump a config class to string"""
-    return cls._tree()
+    if cls is None:
+        return config_tree._tree()
+    else:
+        return cls._tree()
 
 
 def subconfig_of(over_conf):
@@ -165,6 +168,7 @@ def subconfig_of(over_conf):
         if cls.__name__ in dir(config_tree):
             delattr(config_tree, cls.__name__)
         setattr(over_conf, cls.__name__, cls)
+        return cls
 
     return subconfig
 
